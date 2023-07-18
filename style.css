@@ -1,0 +1,174 @@
+body {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.display {
+  display: none;
+}
+button,
+span {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.night {
+  /* Use a linear gradient for the background */
+  background: linear-gradient(to bottom, #000033 0%, #000066 100%);
+  /* Set the height to 100% of the viewport */
+  height: 100vh;
+  /* Set the margin and padding to zero */
+  margin: 0;
+  padding: 0;
+}
+
+/* Use a pseudo-element to create stars */
+.night::before {
+  /* Use absolute positioning */
+  position: absolute;
+  /* Cover the whole body */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Use a transparent background */
+  background: transparent;
+  /* Use a box-shadow to create multiple stars */
+  box-shadow: 1px 1px #fff, 10px 10px #fff, 20px 20px #fff, 30px 30px #fff,
+    40px 40px #fff, 50px 50px #fff, 60px 60px #fff, 70px 70px #fff,
+    80px 80px #fff, 90px 90px #fff, /* Add more stars as you like */;
+  /* Set the content to an empty string */
+  content: "";
+  /* Set the opacity to a low value */
+  opacity: 0.3;
+  /* Set the z-index to -1 to put it behind the other elements */
+  z-index: -1;
+}
+
+/* Add some text to the page */
+.night {
+  /* Use a light blue color for the text */
+  color: lightblue;
+  /* Use a large font size */
+  font-size: 50px;
+  /* Center the text horizontally and vertically */
+  text-align: center;
+  line-height: 100vh;
+  /* Use a text-shadow to create a glow effect */
+  text-shadow: -1px -1px 0 lightblue;
+}
+
+.day {
+  /* Use a linear gradient for the background */
+  background: linear-gradient(to bottom, #66ccff 0%, #ffffff 100%);
+  /* Set the height to 100% of the viewport */
+  height: 100vh;
+  /* Set the margin and padding to zero */
+  margin: 0;
+  padding: 0;
+}
+
+/* Use a pseudo-element to create a sun */
+.day::before {
+  /* Use absolute positioning */
+  position: absolute;
+  /* Place the sun at the top left corner */
+  top: 0;
+  left: 0;
+  /* Use a circle shape */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* Use a yellow color for the sun */
+  background: yellow;
+  /* Use a box-shadow to create sun rays */
+  box-shadow: 10px -10px yellow, 20px -20px yellow, 30px -30px yellow,
+    40px -40px yellow, 50px -50px yellow, 60px -60px yellow, 70px -70px yellow,
+    80px -80px yellow, /* Add more rays as you like */;
+  /* Set the content to an empty string */
+  content: "";
+  /* Set the z-index to -1 to put it behind the other elements */
+  z-index: -1;
+}
+
+/* Add some text to the page */
+.day {
+  /* Use a dark blue color for the text */
+  color: darkblue;
+  /* Use a large font size */
+  font-size: 50px;
+  /* Center the text horizontally and vertically */
+  text-align: center;
+  line-height: 100vh;
+}
+
+/* Add this to your CSS */
+/* Style the button */
+.dark {
+  /* Use a dark blue color for the background */
+  background-color: #000066;
+  /* Use a white color for the text */
+  color: white;
+  /* Use a large font size */
+  font-size: 20px;
+  /* Use some padding and margin */
+  padding: 10px 20px;
+  margin: 20px;
+  /* Use a border-radius to make it round */
+  border-radius: 10px;
+  /* Use a box-shadow to create a glow effect */
+  box-shadow: -1px -1px 0 lightblue, -2px -2px 0 lightblue,
+    -3px -3px 0 lightblue, -4px -4px 0 lightblue, -5px -5px 0 lightblue,
+    -6px -6px 0 lightblue;
+}
+
+/* Change the button style when hovered */
+.dark:hover {
+  /* Use a lighter blue color for the background */
+  background-color: #000099;
+}
+
+/* Change the button style when clicked */
+.dark:active {
+  /* Use a darker blue color for the background */
+  background-color: #000033;
+}
+
+/* Add this to your CSS */
+/* Style the button */
+.light {
+  /* Use a light yellow color for the background */
+  background-color: #ffff66;
+  /* Use a black color for the text */
+  color: black;
+  /* Use a large font size */
+  font-size: 20px;
+  /* Use some padding and margin */
+  padding: 10px 20px;
+  margin: 20px;
+  /* Use a border-radius to make it round */
+  border-radius: 10px;
+  /* Use a box-shadow to create a sun effect */
+  box-shadow: -1px -1px 0 yellow, -2px -2px 0 yellow, -3px -3px 0 yellow,
+    -4px -4px 0 yellow, -5px -5px 0 yellow, -6px -6px 0 yellow;
+}
+
+/* Change the button style when hovered */
+.light:hover {
+  /* Use a brighter yellow color for the background */
+  background-color: #ffff99;
+}
+
+/* Change the button style when clicked */
+.light:active {
+  /* Use a darker yellow color for the background */
+  background-color: #ffff33;
+}
